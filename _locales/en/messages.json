@@ -1,0 +1,8 @@
+{
+  "description": {
+    "message": "Lock access to Skype Web after a period of time or by pressing the action button"
+  },
+  "action": {
+    "message": "Open a new Skype Web tab or focus an already opened one then lock it"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "name": "Password Lock for Skype™ Web",
+  "description": "__MSG_description__",
+  "version": "0.1.0",
+  "manifest_version": 3,
+  "default_locale": "en",
+  "permissions": [
+    "storage",
+    "alarms",
+    "idle"
+  ],
+  "host_permissions": [
+    "https://web.skype.com/*"
+  ],
+  "background": {
+    "service_worker": "worker.js"
+  },
+  "action": {
+    "default_title": "__MSG_action__"
+  },
+  "icons": {
+    "16": "data/icons/16.png",
+    "32": "data/icons/32.png",
+    "48": "data/icons/48.png",
+    "64": "data/icons/64.png",
+    "128": "data/icons/128.png",
+    "256": "data/icons/256.png",
+    "512": "data/icons/512.png"
+  },
+  "content_scripts": [{
+    "matches": ["https://web.skype.com/*"],
+    "js": ["/data/blocker.js"],
+    "css": ["/data/blocker.css"],
+    "run_at": "document_start"
+  }],
+  "web_accessible_resources": [{
+    "resources": ["/data/lock/index.html"],
+    "matches": ["https://web.skype.com/*"]
+  }],
+  "commands": {
+    "_execute_action": {}
+  }
+}
