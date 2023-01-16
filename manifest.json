@@ -1,7 +1,7 @@
 {
   "name": "Password Lock for Skype™ Web",
   "description": "__MSG_description__",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "manifest_version": 3,
   "default_locale": "en",
   "permissions": [
@@ -12,6 +12,7 @@
   "host_permissions": [
     "https://web.skype.com/*"
   ],
+  "homepage_url": "https://webextension.org/listing/password-lock-for-skype.html",
   "background": {
     "service_worker": "worker.js"
   },
